@@ -49,13 +49,13 @@ def main():
     driver.find_element(by='id', value='id_username').send_keys("automated")
     time.sleep(2)
     driver.find_element(by='id', value='id_password').send_keys(
-        "automatedautomated" + Keys.RETURN)
+        "automatedautomated" + Keys.RETURN) # Keys.RETURN --> Enter Key
     # time.sleep(2)
-    # driver.find_element(by='id', value='submit').click()
+    # driver.find_element(by='xpath', value='//button[contains(@type, "submit")]').click()
     time.sleep(2)
 
     # Click on the Home button on the nav bar
-    driver.find_element(by='xpath', value='/html/body/nav/div/a').click()
+    driver.find_element(by='xpath', value="//a[contains(text(), 'Home')]").click()
     time.sleep(2)
 
     while True:
